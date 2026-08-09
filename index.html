@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heartberry Quest | The Berry Bunch</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="bg-decorations" aria-hidden="true">
+    <div class="floating-berry b1"></div>
+    <div class="floating-berry b2"></div>
+    <div class="floating-berry b3"></div>
+    <div class="floating-berry b4"></div>
+  </div>
+
+  <main class="game-wrapper">
+    <header class="game-header">
+      <h1 class="logo">Heartberry <span>Quest</span></h1>
+      <div class="stats-bar">
+        <div class="stat-card">
+          <span class="stat-label">SCORE</span>
+          <span id="score-display" class="stat-value">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">MOVES</span>
+          <span id="moves-display" class="stat-value">20</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">GOAL</span>
+          <span id="goal-display" class="stat-value">Red Berries: 0/15</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="helper-section">
+      <div class="helper-avatar" id="helper-avatar">
+        <div class="ruby-face"></div>
+      </div>
+      <div class="helper-info">
+        <h3>Ruby Razzleberry</h3>
+        <div class="meter-wrapper">
+          <div class="meter-fill" id="charge-meter" style="width: 0%;"></div>
+        </div>
+        <span class="meter-text" id="meter-text">Charge Meter: 0/10</span>
+      </div>
+      <button id="ability-btn" class="btn-ability" disabled>
+        RAZZLE BLAST!
+      </button>
+    </section>
+
+    <section class="board-container">
+      <div id="game-board" class="game-board"></div>
+      <div id="modal-overlay" class="modal overlay-hidden">
+        <div class="modal-content">
+          <h2 id="modal-title">Level Complete!</h2>
+          <p id="modal-desc">You matched your way to victory!</p>
+          <button id="restart-btn" class="btn-primary">Play Again</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="game-footer">
+      <p>💡 <strong>How to Play:</strong> Click or tap adjacent berries to swap them and make matches of 3 or more!</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
